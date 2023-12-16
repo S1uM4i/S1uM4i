@@ -7,7 +7,8 @@
   font-family: pixel;
   src: url("assets/fonts/ark-pixel-12px-proportional-zh_cn.otf");
 }
-body{
+
+body {
   background-color: black;
 }
 </style>
