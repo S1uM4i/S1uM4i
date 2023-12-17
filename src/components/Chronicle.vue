@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import {ref} from 'vue';
+import { ref } from "vue";
 
 const achievements = ref([
-  "你講得啱，但係 S1uM4i 係由華南高校組成嘅 CTF 聯隊，活躍係叫做「CTF」嘅遊戲裏面。係嗰度，畀S1uM4i揀中嘅人會獲賜「SM之力」。 呢支戰隊已經贏咗好多獎，哋會飾演一個叫做「SMer」嘅神秘角色，解決難題，搵翻失散嘅 FLAG，同時發掘「SM」嘅真相。",
+  "你講得啱，但係 S1uM4i 係由華南高校組成嘅 CTF 聯隊，活躍係叫做「CTF」嘅遊戲裏面。係嗰度，畀S1uM4i揀中嘅人會獲賜「SM之力」。呢支戰隊已經贏咗好多獎，哋會飾演一個叫做「SMer」嘅神秘角色，解決難題，搵翻失散嘅 FLAG，同時發掘「SM」嘅真相。",
   "2023",
   "第六届“强网”拟态防御国际精英挑战赛 Mobile 第三名",
   "第六届“强网”拟态防御国际精英挑战赛 人工智能 第六名",
@@ -14,16 +14,23 @@ const achievements = ref([
   "“巅峰极客”网络安全技能挑战赛 第七名",
   "XCTF 联赛 *CTF 第二名",
   "XCTF 联赛 SCTF 第四名",
-  "D3CTF x AntCTF 第二名"
+  "D3CTF x AntCTF 第二名",
 ]);
 </script>
 
 <template>
-  <div class="h-56 grid grid-cols-1 gap-4 content-center" style="height: calc(100vh - 10px);padding-right: 10px">
+  <div
+    class="h-56 grid grid-cols-1 gap-4 content-center"
+    style="height: calc(100vh - 10px); padding-right: 10px"
+  >
     <PixelBorder style="height: calc(100vh - 30px)">
       <div class="grid justify-items-center">
-        <div class="overflow-auto" style="height: 800px;padding: 40px">
-          <p v-for="(achievement, index) in achievements" :key="index" style="font-size:30px;">
+        <div class="overflow-auto" style="height: 800px; padding: 40px">
+          <p
+            v-for="(achievement, index) in achievements"
+            :key="index"
+            style="font-size: 30px"
+          >
             {{ achievement }}
           </p>
         </div>

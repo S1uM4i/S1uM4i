@@ -158,6 +158,4 @@
   right: 5px;
 }
 </style>
-<script>
-
-</script>
+<script></script>
