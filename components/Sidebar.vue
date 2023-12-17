@@ -3,16 +3,16 @@
 import {ref} from 'vue';
 
 const menu_list = ref([
-  {"cn": "编年史", "en": "/Chronicle", "src": "_nuxt/assets/images/search.webp"},
-  {"cn": "英灵殿", "en": "/Valhalla", "src": "_nuxt/assets/images/award.webp"},
-  {"cn": "幻想乡", "en": "/Arcadia", "src": "_nuxt/assets/images/star.webp"},
+  {"cn": "编年史", "en": "/Chronicle", "src": "/images/search.webp"},
+  {"cn": "英灵殿", "en": "/Valhalla", "src": "/images/award.webp"},
+  {"cn": "幻想乡", "en": "/Arcadia", "src": "/images/star.webp"},
 ]);
 </script>
 
 <template>
   <div class="h-56 grid grid-cols-1 gap-4 content-center" style="height: 100vh">
     <div class="grid justify-items-center">
-      <img class="h-[200px]" src="assets/images/avatar.jpg" alt=""/>
+      <img class="h-[200px]" src="/images/avatar.jpg" alt=""/>
 
       <b style="font-size:60px;">
         S1uM4i

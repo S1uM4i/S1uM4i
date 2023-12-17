@@ -14,16 +14,7 @@ const achievements = ref([
   "“巅峰极客”网络安全技能挑战赛 第七名",
   "XCTF 联赛 *CTF 第二名",
   "XCTF 联赛 SCTF 第四名",
-  "D3CTF x AntCTF 第二名",
-  "D3CTF x AntCTF 第二名",
-  "D3CTF x AntCTF 第二名",
-  "D3CTF x AntCTF 第二名",
-  "D3CTF x AntCTF 第二名",
-  "D3CTF x AntCTF 第二名",
-  "D3CTF x AntCTF 第二名",
-  "D3CTF x AntCTF 第二名",
-  "D3CTF x AntCTF 第二名",
-  "D3CTF x AntCTF 第二名",
+  "D3CTF x AntCTF 第二名"
 ]);
 </script>
 
