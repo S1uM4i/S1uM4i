@@ -64,11 +64,8 @@ export default {
 <style scoped>
 #tv {
   position: fixed;
-  //top: 50%;
-  //left: 50%;
   width: 100%;
   height: 100%;
-  //background-color: black;
   transform-origin: center;
 }
 </style>
