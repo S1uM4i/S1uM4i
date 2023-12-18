@@ -157,5 +157,9 @@
   bottom: 15px;
   right: 5px;
 }
+
+* {
+  font-family: pixel, serif;
+}
 </style>
 <script></script>

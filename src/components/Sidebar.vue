@@ -10,7 +10,7 @@ const menu_list = ref([
 
 <template>
   <div class="h-full flex flex-col justify-center items-center">
-    <img class="h-[200px]" src="/images/avatar.jpg" alt="" />
+    <img class="h-[200px] rounded-md" src="/images/avatar.jpg" alt="avatar" />
 
     <b style="font-size: 60px"> S1uM4i </b>
 
@@ -21,14 +21,14 @@ const menu_list = ref([
       <PixelBorder class="menu">
         <NuxtLink :to="menu.en">
           <div
-            class="p-6 max-w-sm mx-auto rounded-xl flex items-center space-x-4"
+            class="p-5 max-w-sm mx-auto rounded-xl flex items-center space-x-4"
           >
             <div class="shrink-0">
-              <img class="h-14 w-14" :src="menu.src" alt="" />
+              <img class="h-14 w-14" :src="menu.src" :alt="menu.en" />
             </div>
             <div>
               <div
-                class="text-xl font-medium text-black"
+                class="text-xl font-medium text-black mb-2"
                 style="font-size: 40px"
               >
                 <b>{{ menu.cn }}</b>
@@ -48,9 +48,5 @@ const menu_list = ref([
 .menu {
   width: 280px;
   height: 100px;
-}
-
-b {
-  font-family: pixel, serif;
 }
 </style>
