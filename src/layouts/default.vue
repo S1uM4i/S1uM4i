@@ -1,12 +1,12 @@
 <template>
   <TvEffect />
-  <div class="main">
-    <PixelBorder style="height: calc(100vh - 10px); width: calc(100vw - 10px)">
-      <div class="grid grid-cols-4 gap-4">
-        <div class="row-span-3 col-span-1" style="height: calc(100vh - 10px)">
+  <div class="main h-screen">
+    <PixelBorder class="h-full">
+      <div class="h-full flex gap-x-4">
+        <div class="basis-1/4">
           <Sidebar />
         </div>
-        <div class="row-span-3 col-span-3">
+        <div class="basis-3/4 p-3">
           <slot />
         </div>
       </div>
@@ -25,8 +25,7 @@ body {
 }
 
 .main {
-  padding: 5px;
-  overflow: hidden;
+  @apply p-1.5 overflow-hidden;
 }
 </style>
 

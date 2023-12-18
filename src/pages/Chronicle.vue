@@ -21,24 +21,18 @@ const achievements = ref([
 </script>
 
 <template>
-  <div
-      class="h-56 grid grid-cols-1 gap-4 content-center"
-      style="height: calc(100vh - 10px); padding-right: 10px"
-  >
-    <PixelBorder style="height: calc(100vh - 30px)">
-      <div class="grid justify-items-center">
-        <div class="overflow-auto" style="height: 800px; padding: 40px">
-          <p
-              v-for="(achievement, index) in achievements"
-              :key="index"
-              style="font-size: 30px"
-          >
-            {{ achievement }}
-          </p>
-        </div>
+  <PixelBorder class="h-full flex flex-col shrink overflow-hidden">
+    <div class="overflow-scroll">
+      <div class="text-3xl leading-normal p-10">
+        <p
+            v-for="(achievement, index) in achievements"
+            :key="index"
+        >
+          {{ achievement }}
+        </p>
       </div>
-    </PixelBorder>
-  </div>
+    </div>
+  </PixelBorder>
 </template>
 
 <style scoped>
