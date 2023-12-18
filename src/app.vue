@@ -1,17 +1,5 @@
 <template>
-  <TvEffect />
-  <Main></Main>
+  <NuxtLayout>
+    <NuxtPage/>
+  </NuxtLayout>
 </template>
-
-<style>
-@font-face {
-  font-family: pixel;
-  src: url("/fonts/ark-pixel-12px-proportional-zh_cn.otf");
-}
-
-body {
-  background-color: black;
-}
-</style>
-
-<script setup lang="ts"></script>
