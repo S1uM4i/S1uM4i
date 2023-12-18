@@ -17,7 +17,7 @@
 <style>
 @font-face {
   font-family: pixel;
-  src: url("/fonts/ark-pixel-12px-proportional-zh_cn.otf");
+  src: url("/fonts/fusion-pixel.woff2");
 }
 
 body {
