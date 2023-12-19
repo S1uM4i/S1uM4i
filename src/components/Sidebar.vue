@@ -2,51 +2,40 @@
 import { ref } from "vue";
 
 const menu_list = ref([
-  { cn: "编年史", en: "/Chronicle", src: "/images/search.webp" },
-  { cn: "英灵殿", en: "/Valhalla", src: "/images/award.webp" },
-  { cn: "幻想乡", en: "/Arcadia", src: "/images/star.webp" },
+  { cn: "编年史", href: "/Chronicle", src: "/images/search.webp" },
+  { cn: "英灵殿", href: "/Valhalla", src: "/images/award.webp" },
+  { cn: "幻想乡", href: "/Arcadia", src: "/images/star.webp" },
 ]);
 </script>
 
 <template>
-  <div class="h-full flex flex-col justify-center items-center">
-    <img class="h-[200px] rounded-md" src="/images/avatar.jpg" alt="avatar" />
+  <div class="h-full p-3 flex flex-col justify-center items-center">
+    <img
+      class="h-[200px] short:h-[160px] rounded-md"
+      src="/images/avatar.jpg"
+      alt="avatar"
+    />
 
-    <b style="font-size: 60px"> S1uM4i </b>
+    <b class="text-6xl my-3 short:text-5xl short:my-2"> S1uM4i </b>
 
-    <b style="font-size: 20px"> 三点几嘞，饮茶先 </b>
+    <b class="text-xl short:text-base mb-auto"> 三点几嘞，饮茶先 </b>
 
-    <div style="margin-bottom: 80px"></div>
-    <div v-for="menu in menu_list">
-      <PixelBorder class="menu">
-        <NuxtLink :to="menu.en">
-          <div
-            class="p-5 max-w-sm mx-auto rounded-xl flex items-center space-x-4"
-          >
-            <div class="shrink-0">
-              <img class="h-14 w-14" :src="menu.src" :alt="menu.en" />
-            </div>
-            <div>
-              <div
-                class="text-xl font-medium text-black mb-2"
-                style="font-size: 40px"
-              >
-                <b>{{ menu.cn }}</b>
+    <div class="mt-2" v-for="menu in menu_list" :key="menu.href">
+      <PixelBorder class="px-9">
+        <NuxtLink :to="menu.href">
+          <div class="py-5 short:py-3 mx-auto flex items-center space-x-3">
+            <img class="h-14 short:h-12" :src="menu.src" :alt="menu.href" />
+            <div class="flex flex-col justify-center font-bold">
+              <div class="text-4xl short:text-3xl">{{ menu.cn }}</div>
+              <div class="text-slate-900 leading-4 short:text-sm">
+                {{ menu.href }}
               </div>
-              <b class="text-slate-900">{{ menu.en }}</b>
             </div>
           </div>
         </NuxtLink>
       </PixelBorder>
-
-      <div style="margin-bottom: 10px"></div>
     </div>
   </div>
 </template>
 
-<style scoped>
-.menu {
-  width: 280px;
-  height: 100px;
-}
-</style>
+<style scoped></style>

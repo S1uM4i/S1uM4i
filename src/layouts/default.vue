@@ -3,10 +3,10 @@
   <div class="main h-screen">
     <PixelBorder class="h-full">
       <div class="h-full flex gap-x-4">
-        <div class="basis-1/4">
+        <div class="basis-1/4 min-w-fit">
           <Sidebar />
         </div>
-        <div class="basis-3/4 p-3">
+        <div class="basis-3/4 p-3 pl-0">
           <slot />
         </div>
       </div>
