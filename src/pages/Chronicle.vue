@@ -39,19 +39,17 @@ const boldify = (str: string) => {
 </script>
 
 <template>
-  <PixelBorder class="h-full flex flex-col shrink overflow-hidden">
-    <div class="overflow-scroll">
-      <div class="text-3xl leading-normal p-6">
-        <p v-html="boldify(intro)"></p>
-        <hr class="my-6" />
-        <div v-for="(achievement, year) in achievements" :key="year">
-          <h2 class="text-5xl">{{ year }}</h2>
-          <ul class="ml-4">
-            <li v-for="item in achievement" :key="item" class="mt-2">
-              <span v-html="boldify(item)"></span>
-            </li>
-          </ul>
-        </div>
+  <PixelBorder class="h-full">
+    <div class="h-full p-6 overflow-scroll text-3xl leading-normal">
+      <p v-html="boldify(intro)"></p>
+      <hr class="my-6" />
+      <div v-for="(achievement, year) in achievements" :key="year">
+        <h2 class="text-5xl">{{ year }}</h2>
+        <ul class="ml-4">
+          <li v-for="item in achievement" :key="item" class="mt-2">
+            <span v-html="boldify(item)"></span>
+          </li>
+        </ul>
       </div>
     </div>
   </PixelBorder>
