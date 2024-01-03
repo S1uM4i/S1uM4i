@@ -15,12 +15,15 @@ export default defineNuxtConfig({
             })
         }
     },
-    nitro: {
-        devProxy: {
-            '/qlogo': {
-                target: 'https://q1.qlogo.cn/',
-                changeOrigin: true,
-            },
+    vite: {
+        server: {
+            proxy: {
+                '/qlogo': {
+                    target: 'https://q1.qlogo.cn/',
+                    changeOrigin: true,
+                    rewrite: (path) => path.replace(/^\/qlogo/, ""),
+                }
+            }
         }
-    },
+    }
 })
