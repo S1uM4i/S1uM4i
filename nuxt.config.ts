@@ -14,5 +14,13 @@ export default defineNuxtConfig({
                 file: '~/pages/Chronicle.vue'
             })
         }
-    }
+    },
+    nitro: {
+        devProxy: {
+            '/qlogo': {
+                target: 'https://q1.qlogo.cn/',
+                changeOrigin: true,
+            },
+        }
+    },
 })
