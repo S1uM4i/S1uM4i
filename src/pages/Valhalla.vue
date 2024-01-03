@@ -34,7 +34,7 @@ onMounted(() => {
 });
 
 function applyPixelationEffect(ctx: CanvasRenderingContext2D, width: number, height: number, offsetX: number, offsetY: number) {
-  const pixelSize = 5;
+  const pixelSize = 4;
   for (let y = 0; y < height; y += pixelSize) {
     for (let x = 0; x < width; x += pixelSize) {
       const pixelData = ctx.getImageData(x + offsetX, y + offsetY, 1, 1).data;
