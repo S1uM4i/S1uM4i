@@ -14,16 +14,5 @@ export default defineNuxtConfig({
                 file: '~/pages/Chronicle.vue'
             })
         }
-    },
-    vite: {
-        server: {
-            proxy: {
-                '/qlogo': {
-                    target: 'https://q1.qlogo.cn/',
-                    changeOrigin: true,
-                    rewrite: (path) => path.replace(/^\/qlogo/, ""),
-                }
-            }
-        }
     }
 })
