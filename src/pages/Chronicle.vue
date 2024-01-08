@@ -1,19 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
-const achievements = {
-  "2023": [
-    "第六届“强网”拟态防御国际精英挑战赛 <br/>" +
-      "&emsp; Mobile 第三名 + 人工智能 第六名 + 车联网 第十五名",
-    "第三届“香山杯”网络安全大赛 <br/>" + "&emsp; 企业组 第一名 + 高校组 第二名",
-    "第三届“鹏城杯”联邦网络靶场协同攻防演练比赛 第二名",
-    "首届“中华武数杯”全国网络攻防精英赛 第十名",
-    "“巅峰极客”网络安全技能挑战赛 第七名",
-    "XCTF 联赛 *CTF 第二名",
-    "XCTF 联赛 SCTF 第四名",
-    "D3CTF × AntCTF 第二名",
-  ],
-};
+import achievements from "../assets/data/achievements.json";
 
 const intro =
   "你講得啱，但係 S1uM4i 係由華南高校組成嘅 CTF 聯隊，活躍喺叫做「CTF」嘅遊戲入面。" +
