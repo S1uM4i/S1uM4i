@@ -130,13 +130,6 @@ const handleClick = (url: string) => {
                   {{ member.words }}
                 </strong>
               </div>
-              <div class="p-2" :class="changeMargin(i)">
-                <strong
-                  class="text-slate-900 text-2xl items-center font-medium whitespace-pre-wrap"
-                >
-                  {{ member.words }}
-                </strong>
-              </div>
             </div>
           </div>
         </div>
