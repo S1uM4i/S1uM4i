@@ -12,7 +12,7 @@ const menu_list = ref([
   <div class="h-full p-3 flex flex-col justify-center items-center">
     <img
       class="h-[200px] short:h-[160px] rounded-md"
-      src="/images/avatar.jpg"
+      src="/images/logo.webp"
       alt="avatar"
     />
 
