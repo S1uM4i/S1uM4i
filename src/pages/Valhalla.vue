@@ -1,74 +1,5 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
 import members from "../assets/data/valhalla.json";
-
-onMounted(() => {
-  const imageContainers = document.querySelectorAll(".pixel-circle-image");
-  imageContainers.forEach((container) => {
-    const canvas = container.querySelector("canvas");
-    const avatar = container.querySelector("img");
-    if (canvas instanceof HTMLCanvasElement) {
-      const ctx = canvas.getContext("2d", { willReadFrequently: true });
-      if (ctx && avatar) {
-        const image = new Image();
-        image.crossOrigin = "anonymous";
-        image.src = avatar.src; // 替换为你的图片路径
-        image.onload = () => {
-          // 调整图像尺寸以适应canvas，同时保持纵横比
-          canvas.width = 80; // 设定宽度
-          canvas.height = 80; // 设定高度
-          const scale = Math.max(
-            canvas.width / image.width,
-            canvas.height / image.height,
-          );
-          const imgWidth = scale * image.width;
-          const imgHeight = scale * image.height;
-          console.log(canvas.width, image.width, canvas.height, image.height);
-          // 清除之前的绘图
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          ctx.drawImage(image, 0, 0, imgWidth, imgHeight);
-          applyPixelationEffect(ctx, imgWidth, imgHeight, 0, 0);
-        };
-      }
-    }
-  });
-});
-
-function applyPixelationEffect(
-  ctx: CanvasRenderingContext2D,
-  width: number,
-  height: number,
-  offsetX: number,
-  offsetY: number,
-) {
-  const pixelSize = 4;
-  const sampleSize = 3;
-  for (let y = 0; y < height; y += pixelSize) {
-    for (let x = 0; x < width; x += pixelSize) {
-      const pixelData = ctx.getImageData(
-        x + offsetX,
-        y + offsetY,
-        sampleSize,
-        sampleSize,
-      ).data;
-
-      const average = [0, 0, 0, 0];
-      for (let i = 0; i < sampleSize * sampleSize; i++) {
-        for (let j = 0; j < 4; j++) {
-          average[j] += pixelData[i * 4 + j];
-        }
-      }
-      for (let j = 0; j < 4; j++) {
-        average[j] /= sampleSize * sampleSize;
-      }
-
-      ctx.fillStyle = `rgba(${average[0]}, ${average[1]}, ${average[2]}, ${
-        pixelData[3] / 255
-      })`;
-      ctx.fillRect(x + offsetX, y + offsetY, pixelSize, pixelSize);
-    }
-  }
-}
 
 const isEven = (i: number) => {
   return i % 2 === 1;
@@ -110,8 +41,7 @@ const handleClick = (url: string) => {
                 class="pixel-circle-image cursor-pointer absolute"
                 @click="handleClick(member.url)"
               >
-                <img :src="member.avatar" hidden="hidden" alt="" />
-                <canvas></canvas>
+                <PixelateImage :src="member.avatar" />
               </div>
             </div>
           </div>

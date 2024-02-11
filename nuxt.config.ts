@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    experimental: {
+        componentIslands: true,
+    },
     app: {
         head: {
             charset: 'utf-8',
@@ -11,7 +14,7 @@ export default defineNuxtConfig({
     modules: [
         '@nuxtjs/tailwindcss'
     ],
-    ssr: false,
+    ssr: true,
     hooks: {
         'pages:extend'(pages) {
             // 添加一个路由

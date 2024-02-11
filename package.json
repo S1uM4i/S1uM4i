@@ -11,8 +11,10 @@
     "prettier": "prettier --write src"
   },
   "devDependencies": {
+    "@cwasm/webp": "^0.1.5",
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.10.1",
+    "canvas": "^2.11.2",
     "nuxt": "^3.8.2",
     "vue": "^3.3.12",
     "vue-router": "^4.2.5",
