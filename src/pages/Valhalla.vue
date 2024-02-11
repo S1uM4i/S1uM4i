@@ -18,10 +18,6 @@ const changeRight = (i: number) => {
     return ["text-right", "ml-auto"];
   }
 };
-
-const handleClick = (url: string) => {
-  window.open(url, "_blank", "noopener");
-};
 </script>
 
 <template>
@@ -37,12 +33,14 @@ const handleClick = (url: string) => {
           <div class="items-center gap-3">
             <div class="h-[80px] w-[80px] relative">
               <div class="pixel-circle absolute bg-black"></div>
-              <div
+              <a
                 class="pixel-circle-image cursor-pointer absolute"
-                @click="handleClick(member.url)"
+                :href="member.url"
+                target="_blank"
+                rel="noopener"
               >
                 <PixelateImage :src="member.avatar" />
-              </div>
+              </a>
             </div>
           </div>
           <div class="flex flex-col relative gap-2" :class="changeRight(i)">
