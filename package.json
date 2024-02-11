@@ -13,7 +13,7 @@
   "devDependencies": {
     "@cwasm/webp": "^0.1.5",
     "@nuxt/devtools": "latest",
-    "@nuxtjs/tailwindcss": "^6.10.1",
+    "@nuxtjs/tailwindcss": "^6.11.4",
     "canvas": "^2.11.2",
     "nuxt": "^3.8.2",
     "vue": "^3.3.12",
