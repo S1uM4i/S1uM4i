@@ -15,9 +15,9 @@
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.11.4",
     "canvas": "^2.11.2",
-    "nuxt": "^3.8.2",
-    "vue": "^3.3.12",
-    "vue-router": "^4.2.5",
-    "prettier": "^3.1.1"
+    "nuxt": "^3.10.1",
+    "prettier": "^3.2.5",
+    "vue": "^3.4.18",
+    "vue-router": "^4.2.5"
   }
 }
