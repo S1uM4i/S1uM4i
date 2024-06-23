@@ -7,7 +7,7 @@ const intro =
   "呢支戰隊已經贏咗好多獎。我哋會飾演一個叫做「SMer」嘅神秘角色，" +
   "解決難題，搵翻失散嘅 FLAG，同時發掘「SM」嘅真相。";
 
-const pattern = new RegExp(/第[一二三四五六七八九十]*名|S1uM4i|「.*?」/, "g");
+const pattern = new RegExp(/第[一二三四五六七八九十]*名|S1uM4i|「.*?」|[冠亚季]军/, "g");
 
 const boldify = (str: string) => {
   const matches = str.matchAll(pattern);
