@@ -7,7 +7,10 @@ const intro =
   "呢支戰隊已經贏咗好多獎。我哋會飾演一個叫做「SMer」嘅神秘角色，" +
   "解決難題，搵翻失散嘅 FLAG，同時發掘「SM」嘅真相。";
 
-const pattern = new RegExp(/第[一二三四五六七八九十]*名|S1uM4i|「.*?」|[冠亚季]军/, "g");
+const pattern = new RegExp(
+  /第[一二三四五六七八九十]*名|S1uM4i|「.*?」|[冠亚季]军/,
+  "g",
+);
 
 const boldify = (str: string) => {
   const matches = str.matchAll(pattern);
@@ -22,6 +25,10 @@ const boldify = (str: string) => {
   result += str.slice(last);
   return result;
 };
+
+const sortedAchievements = Object.entries(achievements).sort(
+  (a, b) => parseInt(b[0]) - parseInt(a[0]),
+);
 </script>
 
 <template>
@@ -29,10 +36,10 @@ const boldify = (str: string) => {
     <div class="h-full p-6 overflow-scroll text-3xl leading-normal">
       <p v-html="boldify(intro)"></p>
       <hr class="my-6" />
-      <div v-for="(achievement, year) in achievements" :key="year">
-        <h2 class="text-5xl">{{ year }}</h2>
+      <div v-for="achievement in sortedAchievements" :key="achievement[0]">
+        <h2 class="text-5xl">{{ achievement[0] }}</h2>
         <ul class="ml-4">
-          <li v-for="item in achievement" :key="item" class="mt-2">
+          <li v-for="item in achievement[1]" :key="item" class="mt-2">
             <span v-html="boldify(item)"></span>
           </li>
         </ul>

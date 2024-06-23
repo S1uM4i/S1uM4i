@@ -24,7 +24,11 @@ const menu_list = ref([
       <PixelBorder class="px-9">
         <NuxtLink :to="menu.href">
           <div class="py-5 short:py-3 mx-auto flex items-center space-x-3">
-            <img class="size-14 short:size-12" :src="menu.src" :alt="menu.href" />
+            <img
+              class="size-14 short:size-12"
+              :src="menu.src"
+              :alt="menu.href"
+            />
             <div class="flex flex-col justify-center font-bold">
               <div class="text-4xl short:text-3xl">{{ menu.cn }}</div>
               <div class="text-slate-900 leading-4 short:text-sm">

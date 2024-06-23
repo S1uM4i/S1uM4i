@@ -1,329 +1,329 @@
 .pixel-circle,
 .pixel-circle-image,
 .pixel-dialog {
-    --width: 100%;
-    --height: 100%;
+  --width: 100%;
+  --height: 100%;
 
-    min-width: 80px;
-    min-height: 80px;
+  min-width: 80px;
+  min-height: 80px;
 
-    --bottom-border-5: calc(var(--height) - 5px);
-    --bottom-border-10: calc(var(--height) - 10px);
-    --bottom-border-15: calc(var(--height) - 15px);
-    --bottom-border-25: calc(var(--height) - 25px);
+  --bottom-border-5: calc(var(--height) - 5px);
+  --bottom-border-10: calc(var(--height) - 10px);
+  --bottom-border-15: calc(var(--height) - 15px);
+  --bottom-border-25: calc(var(--height) - 25px);
 
-    --left-border-5: calc(var(--width) - 5px);
-    --left-border-10: calc(var(--width) - 10px);
-    --left-border-15: calc(var(--width) - 15px);
-    --left-border-25: calc(var(--width) - 25px);
+  --left-border-5: calc(var(--width) - 5px);
+  --left-border-10: calc(var(--width) - 10px);
+  --left-border-15: calc(var(--width) - 15px);
+  --left-border-25: calc(var(--width) - 25px);
 }
 
 .pixel-dialog {
-    min-width: 70px;
-    min-height: 65px;
-    position: relative;
-    z-index: 0;
-    background-color: white;
+  min-width: 70px;
+  min-height: 65px;
+  position: relative;
+  z-index: 0;
+  background-color: white;
 }
 
 /* 像素对话框 朝左 */
 .pixel-dialog::before {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: "";
-    position: absolute;
-    z-index: -1;
-    background-color: black;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: black;
 
-    --left: 30px;
+  --left: 30px;
 
-    --left-dialog-border-0: calc(var(--left) + 0px);
-    --left-dialog-border-5: calc(var(--left) + 5px);
-    --left-dialog-border-15: calc(var(--left) + 15px);
+  --left-dialog-border-0: calc(var(--left) + 0px);
+  --left-dialog-border-5: calc(var(--left) + 5px);
+  --left-dialog-border-15: calc(var(--left) + 15px);
 
-    clip-path: polygon(
-        /* 左上 尖号 上部 外侧 */ 0px 15px,
-            var(--left-dialog-border-0) 15px,
-            var(--left-dialog-border-0) 10px,
-            var(--left-dialog-border-5) 10px,
-                /* 左上 外侧 */ var(--left-dialog-border-5) 5px,
-            var(--left-dialog-border-15) 5px,
-                /* 上 外侧 */ var(--left-dialog-border-15) 0px,
-            var(--bottom-border-25) 0px,
-                /* 右上 外侧 */ var(--bottom-border-25) 5px,
-            var(--bottom-border-15) 5px,
-            var(--bottom-border-15) 10px,
-            var(--bottom-border-10) 10px,
-            var(--bottom-border-10) 15px,
-            var(--bottom-border-5) 15px,
-            var(--bottom-border-5) 25px,
-                /* 右 外侧 */ var(--width) 25px,
-            var(--width) var(--bottom-border-25),
-                /* 右下 外侧 */ var(--bottom-border-5) var(--bottom-border-25),
-            var(--bottom-border-5) var(--bottom-border-15),
-            var(--bottom-border-10) var(--bottom-border-15),
-            var(--bottom-border-10) var(--bottom-border-10),
-            var(--bottom-border-15) var(--bottom-border-10),
-            var(--bottom-border-15) var(--bottom-border-5),
-            var(--bottom-border-25) var(--bottom-border-5),
-            var(--bottom-border-25) var(--height),
-                /* 下 外侧 */ var(--left-dialog-border-15) var(--height),
-                /* 左下 外侧 */ var(--left-dialog-border-15) var(--bottom-border-5),
-            var(--left-dialog-border-5) var(--bottom-border-5),
-            var(--left-dialog-border-5) var(--bottom-border-10),
-            var(--left-dialog-border-0) var(--bottom-border-10),
-            var(--left-dialog-border-0) var(--bottom-border-15),
-            25px var(--bottom-border-15),
-                /* 左下 内侧 */ 25px var(--bottom-border-25),
-            var(--left-dialog-border-0) var(--bottom-border-25),
-            var(--left-dialog-border-0) var(--bottom-border-15),
-            var(--left-dialog-border-5) var(--bottom-border-15),
-            var(--left-dialog-border-5) var(--bottom-border-10),
-            var(--left-dialog-border-15) var(--bottom-border-10),
-                /* 下 内侧 */ var(--left-dialog-border-15) var(--bottom-border-5),
-            var(--bottom-border-25) var(--bottom-border-5),
-                /* 右下 内侧 */ var(--bottom-border-25) var(--bottom-border-10),
-            var(--bottom-border-15) var(--bottom-border-10),
-            var(--bottom-border-15) var(--bottom-border-15),
-            var(--bottom-border-10) var(--bottom-border-15),
-            var(--bottom-border-10) var(--bottom-border-25),
-            var(--bottom-border-5) var(--bottom-border-25),
-                /* 右上 内侧 */ var(--bottom-border-5) 25px,
-            var(--bottom-border-10) 25px,
-            var(--bottom-border-10) 15px,
-            var(--bottom-border-15) 15px,
-            var(--bottom-border-15) 10px,
-            var(--bottom-border-25) 10px,
-            var(--bottom-border-25) 5px,
-                /* 上部 内侧 */ var(--left-dialog-border-15) 5px,
-            var(--left-dialog-border-15) 10px,
-            var(--left-dialog-border-5) 10px,
-            var(--left-dialog-border-5) 15px,
-            var(--left-dialog-border-0) 15px,
-            var(--left-dialog-border-0) 15px,
-            var(--left-dialog-border-0) 20px,
-                /* 左上 尖号 下部 内侧 */ 10px 20px,
-            10px 25px,
-            15px 25px,
-            15px 30px,
-            20px 30px,
-            20px 35px,
-            25px 35px,
-            25px var(--bottom-border-25),
-            20px var(--bottom-border-25),
-                /* 左上 尖号 下部 外侧 */ 20px 35px,
-            15px 35px,
-            15px 30px,
-            10px 30px,
-            10px 25px,
-            5px 25px,
-            5px 20px,
-            0px 20px
-    );
+  clip-path: polygon(
+    /* 左上 尖号 上部 外侧 */ 0px 15px,
+    var(--left-dialog-border-0) 15px,
+    var(--left-dialog-border-0) 10px,
+    var(--left-dialog-border-5) 10px,
+    /* 左上 外侧 */ var(--left-dialog-border-5) 5px,
+    var(--left-dialog-border-15) 5px,
+    /* 上 外侧 */ var(--left-dialog-border-15) 0px,
+    var(--bottom-border-25) 0px,
+    /* 右上 外侧 */ var(--bottom-border-25) 5px,
+    var(--bottom-border-15) 5px,
+    var(--bottom-border-15) 10px,
+    var(--bottom-border-10) 10px,
+    var(--bottom-border-10) 15px,
+    var(--bottom-border-5) 15px,
+    var(--bottom-border-5) 25px,
+    /* 右 外侧 */ var(--width) 25px,
+    var(--width) var(--bottom-border-25),
+    /* 右下 外侧 */ var(--bottom-border-5) var(--bottom-border-25),
+    var(--bottom-border-5) var(--bottom-border-15),
+    var(--bottom-border-10) var(--bottom-border-15),
+    var(--bottom-border-10) var(--bottom-border-10),
+    var(--bottom-border-15) var(--bottom-border-10),
+    var(--bottom-border-15) var(--bottom-border-5),
+    var(--bottom-border-25) var(--bottom-border-5),
+    var(--bottom-border-25) var(--height),
+    /* 下 外侧 */ var(--left-dialog-border-15) var(--height),
+    /* 左下 外侧 */ var(--left-dialog-border-15) var(--bottom-border-5),
+    var(--left-dialog-border-5) var(--bottom-border-5),
+    var(--left-dialog-border-5) var(--bottom-border-10),
+    var(--left-dialog-border-0) var(--bottom-border-10),
+    var(--left-dialog-border-0) var(--bottom-border-15),
+    25px var(--bottom-border-15),
+    /* 左下 内侧 */ 25px var(--bottom-border-25),
+    var(--left-dialog-border-0) var(--bottom-border-25),
+    var(--left-dialog-border-0) var(--bottom-border-15),
+    var(--left-dialog-border-5) var(--bottom-border-15),
+    var(--left-dialog-border-5) var(--bottom-border-10),
+    var(--left-dialog-border-15) var(--bottom-border-10),
+    /* 下 内侧 */ var(--left-dialog-border-15) var(--bottom-border-5),
+    var(--bottom-border-25) var(--bottom-border-5),
+    /* 右下 内侧 */ var(--bottom-border-25) var(--bottom-border-10),
+    var(--bottom-border-15) var(--bottom-border-10),
+    var(--bottom-border-15) var(--bottom-border-15),
+    var(--bottom-border-10) var(--bottom-border-15),
+    var(--bottom-border-10) var(--bottom-border-25),
+    var(--bottom-border-5) var(--bottom-border-25),
+    /* 右上 内侧 */ var(--bottom-border-5) 25px,
+    var(--bottom-border-10) 25px,
+    var(--bottom-border-10) 15px,
+    var(--bottom-border-15) 15px,
+    var(--bottom-border-15) 10px,
+    var(--bottom-border-25) 10px,
+    var(--bottom-border-25) 5px,
+    /* 上部 内侧 */ var(--left-dialog-border-15) 5px,
+    var(--left-dialog-border-15) 10px,
+    var(--left-dialog-border-5) 10px,
+    var(--left-dialog-border-5) 15px,
+    var(--left-dialog-border-0) 15px,
+    var(--left-dialog-border-0) 15px,
+    var(--left-dialog-border-0) 20px,
+    /* 左上 尖号 下部 内侧 */ 10px 20px,
+    10px 25px,
+    15px 25px,
+    15px 30px,
+    20px 30px,
+    20px 35px,
+    25px 35px,
+    25px var(--bottom-border-25),
+    20px var(--bottom-border-25),
+    /* 左上 尖号 下部 外侧 */ 20px 35px,
+    15px 35px,
+    15px 30px,
+    10px 30px,
+    10px 25px,
+    5px 25px,
+    5px 20px,
+    0px 20px
+  );
 }
 
 /* 像素对话框 朝右 */
 .pixel-dialog.right::before {
-    --right: 10px;
+  --right: 10px;
 
-    --right-border-0: calc(var(--width) - var(--right) - 0px);
-    --right-border-5: calc(var(--width) - var(--right) - 5px);
-    --right-border-10: calc(var(--width) - var(--right) - 10px);
-    --right-border-15: calc(var(--width) - var(--right) - 15px);
-    --right-border-20: calc(var(--width) - var(--right) - 20px);
-    --right-border-25: calc(var(--width) - var(--right) - 25px);
-    --right-border-35: calc(var(--width) - var(--right) - 35px);
+  --right-border-0: calc(var(--width) - var(--right) - 0px);
+  --right-border-5: calc(var(--width) - var(--right) - 5px);
+  --right-border-10: calc(var(--width) - var(--right) - 10px);
+  --right-border-15: calc(var(--width) - var(--right) - 15px);
+  --right-border-20: calc(var(--width) - var(--right) - 20px);
+  --right-border-25: calc(var(--width) - var(--right) - 25px);
+  --right-border-35: calc(var(--width) - var(--right) - 35px);
 
-    --right-dialog-border-0: calc(var(--width) - 0px);
-    --right-dialog-border-5: calc(var(--width) - 5px);
-    --right-dialog-border-10: calc(var(--width) - 10px);
-    --right-dialog-border-15: calc(var(--width) - 15px);
-    --right-dialog-border-25: calc(var(--width) - 25px);
-    --right-dialog-border-20: calc(var(--width) - 20px);
+  --right-dialog-border-0: calc(var(--width) - 0px);
+  --right-dialog-border-5: calc(var(--width) - 5px);
+  --right-dialog-border-10: calc(var(--width) - 10px);
+  --right-dialog-border-15: calc(var(--width) - 15px);
+  --right-dialog-border-25: calc(var(--width) - 25px);
+  --right-dialog-border-20: calc(var(--width) - 20px);
 
-    clip-path: polygon(
-        /* 左上 外侧 */ 0px 25px,
-            5px 25px,
-            5px 15px,
-            10px 15px,
-            10px 10px,
-            15px 10px,
-            15px 5px,
-            25px 5px,
-                /* 上 外侧 */ 25px 0px,
-            var(--right-border-35) 0px,
-                /* 右上 尖号 上部 外侧 */ var(--right-border-35) 5px,
-            var(--right-border-25) 5px,
-            var(--right-border-25) 10px,
-            var(--right-border-20) 10px,
-            var(--right-border-20) 15px,
-            var(--right-dialog-border-0) 15px,
-                /* 右上 尖号 下部 外侧 */ var(--right-dialog-border-0) 20px,
-            var(--right-dialog-border-5) 20px,
-            var(--right-dialog-border-5) 25px,
-            var(--right-dialog-border-10) 25px,
-            var(--right-dialog-border-10) 30px,
-            var(--right-dialog-border-15) 30px,
-            var(--right-dialog-border-15) 35px,
-            var(--right-dialog-border-20) 35px,
-                /* 右下 外侧 */ var(--right-dialog-border-20) var(--bottom-border-25),
-            var(--right-dialog-border-25) var(--bottom-border-25),
-            var(--right-dialog-border-25) var(--bottom-border-15),
-            var(--right-border-20) var(--bottom-border-15),
-            var(--right-border-20) var(--bottom-border-10),
-            var(--right-border-25) var(--bottom-border-10),
-            var(--right-border-25) var(--bottom-border-5),
-            var(--right-border-35) var(--bottom-border-5),
-                /* 下 外侧 */ var(--right-border-35) var(--height),
-            25px var(--height),
-                /* 左下 外侧 */ 25px var(--bottom-border-5),
-            15px var(--bottom-border-5),
-            15px var(--bottom-border-10),
-            10px var(--bottom-border-10),
-            10px var(--bottom-border-15),
-            5px var(--bottom-border-15),
-            5px var(--bottom-border-25),
-                /* 左下 内侧 */ 10px var(--bottom-border-25),
-            10px var(--bottom-border-15),
-            15px var(--bottom-border-15),
-            15px var(--bottom-border-10),
-            25px var(--bottom-border-10),
-                /* 下 内侧 */ 25px var(--bottom-border-5),
-            var(--right-border-35) var(--bottom-border-5),
-                /* 右下 内侧 */ var(--right-border-35) var(--bottom-border-10),
-            var(--right-border-25) var(--bottom-border-10),
-            var(--right-border-25) var(--bottom-border-15),
-            var(--right-border-20) var(--bottom-border-15),
-            var(--right-border-20) var(--bottom-border-25),
-            var(--right-border-15) var(--bottom-border-25),
-                /* 右上 尖号 下部 内侧 */ var(--right-border-15) 35px,
-            var(--right-border-10) 35px,
-            var(--right-border-10) 30px,
-            var(--right-border-5) 30px,
-            var(--right-border-5) 25px,
-            var(--right-border-0) 25px,
-            var(--right-border-0) 20px,
-                /* 右上 尖号 上部 内侧 */ var(--right-border-20) 20px,
-            var(--right-border-20) 15px,
-            var(--right-border-25) 15px,
-            var(--right-border-25) 10px,
-            var(--right-border-35) 10px,
-                /* 上 内侧 */ var(--right-border-35) 5px,
-            25px 5px,
-                /* 左上 内侧 */ 25px 10px,
-            15px 10px,
-            15px 15px,
-            10px 15px,
-            10px 25px,
-            5px 25px,
-            5px var(--bottom-border-25),
-            0px var(--bottom-border-25)
-    );
+  clip-path: polygon(
+    /* 左上 外侧 */ 0px 25px,
+    5px 25px,
+    5px 15px,
+    10px 15px,
+    10px 10px,
+    15px 10px,
+    15px 5px,
+    25px 5px,
+    /* 上 外侧 */ 25px 0px,
+    var(--right-border-35) 0px,
+    /* 右上 尖号 上部 外侧 */ var(--right-border-35) 5px,
+    var(--right-border-25) 5px,
+    var(--right-border-25) 10px,
+    var(--right-border-20) 10px,
+    var(--right-border-20) 15px,
+    var(--right-dialog-border-0) 15px,
+    /* 右上 尖号 下部 外侧 */ var(--right-dialog-border-0) 20px,
+    var(--right-dialog-border-5) 20px,
+    var(--right-dialog-border-5) 25px,
+    var(--right-dialog-border-10) 25px,
+    var(--right-dialog-border-10) 30px,
+    var(--right-dialog-border-15) 30px,
+    var(--right-dialog-border-15) 35px,
+    var(--right-dialog-border-20) 35px,
+    /* 右下 外侧 */ var(--right-dialog-border-20) var(--bottom-border-25),
+    var(--right-dialog-border-25) var(--bottom-border-25),
+    var(--right-dialog-border-25) var(--bottom-border-15),
+    var(--right-border-20) var(--bottom-border-15),
+    var(--right-border-20) var(--bottom-border-10),
+    var(--right-border-25) var(--bottom-border-10),
+    var(--right-border-25) var(--bottom-border-5),
+    var(--right-border-35) var(--bottom-border-5),
+    /* 下 外侧 */ var(--right-border-35) var(--height),
+    25px var(--height),
+    /* 左下 外侧 */ 25px var(--bottom-border-5),
+    15px var(--bottom-border-5),
+    15px var(--bottom-border-10),
+    10px var(--bottom-border-10),
+    10px var(--bottom-border-15),
+    5px var(--bottom-border-15),
+    5px var(--bottom-border-25),
+    /* 左下 内侧 */ 10px var(--bottom-border-25),
+    10px var(--bottom-border-15),
+    15px var(--bottom-border-15),
+    15px var(--bottom-border-10),
+    25px var(--bottom-border-10),
+    /* 下 内侧 */ 25px var(--bottom-border-5),
+    var(--right-border-35) var(--bottom-border-5),
+    /* 右下 内侧 */ var(--right-border-35) var(--bottom-border-10),
+    var(--right-border-25) var(--bottom-border-10),
+    var(--right-border-25) var(--bottom-border-15),
+    var(--right-border-20) var(--bottom-border-15),
+    var(--right-border-20) var(--bottom-border-25),
+    var(--right-border-15) var(--bottom-border-25),
+    /* 右上 尖号 下部 内侧 */ var(--right-border-15) 35px,
+    var(--right-border-10) 35px,
+    var(--right-border-10) 30px,
+    var(--right-border-5) 30px,
+    var(--right-border-5) 25px,
+    var(--right-border-0) 25px,
+    var(--right-border-0) 20px,
+    /* 右上 尖号 上部 内侧 */ var(--right-border-20) 20px,
+    var(--right-border-20) 15px,
+    var(--right-border-25) 15px,
+    var(--right-border-25) 10px,
+    var(--right-border-35) 10px,
+    /* 上 内侧 */ var(--right-border-35) 5px,
+    25px 5px,
+    /* 左上 内侧 */ 25px 10px,
+    15px 10px,
+    15px 15px,
+    10px 15px,
+    10px 25px,
+    5px 25px,
+    5px var(--bottom-border-25),
+    0px var(--bottom-border-25)
+  );
 }
 
 /* 像素边框 */
 .pixel-circle {
-    clip-path: polygon(
-        /* 左上 外侧 */ 0px 25px,
-            5px 25px,
-            5px 15px,
-            10px 15px,
-            10px 10px,
-            15px 10px,
-            15px 5px,
-            25px 5px,
-            25px 0px,
-                /* 右上 外侧 */ var(--bottom-border-25) 0px,
-            var(--bottom-border-25) 5px,
-            var(--bottom-border-15) 5px,
-            var(--bottom-border-15) 10px,
-            var(--bottom-border-10) 10px,
-            var(--bottom-border-10) 15px,
-            var(--bottom-border-5) 15px,
-            var(--bottom-border-5) 25px,
-            var(--width) 25px,
-                /* 右下 外侧 */ var(--width) var(--bottom-border-25),
-            var(--bottom-border-5) var(--bottom-border-25),
-            var(--bottom-border-5) var(--bottom-border-15),
-            var(--bottom-border-10) var(--bottom-border-15),
-            var(--bottom-border-10) var(--bottom-border-10),
-            var(--bottom-border-15) var(--bottom-border-10),
-            var(--bottom-border-15) var(--bottom-border-5),
-            var(--bottom-border-25) var(--bottom-border-5),
-            var(--bottom-border-25) var(--height),
-                /* 左下 外侧 */ 25px var(--height),
-            25px var(--bottom-border-5),
-            15px var(--bottom-border-5),
-            15px var(--bottom-border-10),
-            10px var(--bottom-border-10),
-            10px var(--bottom-border-15),
-            5px var(--bottom-border-15),
-            5px var(--bottom-border-25),
-                /* 左下 内侧 */ 10px var(--bottom-border-25),
-            10px var(--bottom-border-15),
-            15px var(--bottom-border-15),
-            15px var(--bottom-border-10),
-            25px var(--bottom-border-10),
-            25px var(--bottom-border-5),
-                /* 右下 内侧 */ var(--bottom-border-25) var(--bottom-border-5),
-            var(--bottom-border-25) var(--bottom-border-10),
-            var(--bottom-border-15) var(--bottom-border-10),
-            var(--bottom-border-15) var(--bottom-border-15),
-            var(--bottom-border-10) var(--bottom-border-15),
-            var(--bottom-border-10) var(--bottom-border-25),
-            var(--bottom-border-5) var(--bottom-border-25),
-                /* 右上 内侧 */ var(--bottom-border-5) 25px,
-            var(--bottom-border-10) 25px,
-            var(--bottom-border-10) 15px,
-            var(--bottom-border-15) 15px,
-            var(--bottom-border-15) 10px,
-            var(--bottom-border-25) 10px,
-            var(--bottom-border-25) 5px,
-                /* 左上 内侧 */ 25px 5px,
-            25px 10px,
-            15px 10px,
-            15px 15px,
-            10px 15px,
-            10px 25px,
-            5px 25px,
-            5px var(--bottom-border-25),
-            0px var(--bottom-border-25)
-    );
+  clip-path: polygon(
+    /* 左上 外侧 */ 0px 25px,
+    5px 25px,
+    5px 15px,
+    10px 15px,
+    10px 10px,
+    15px 10px,
+    15px 5px,
+    25px 5px,
+    25px 0px,
+    /* 右上 外侧 */ var(--bottom-border-25) 0px,
+    var(--bottom-border-25) 5px,
+    var(--bottom-border-15) 5px,
+    var(--bottom-border-15) 10px,
+    var(--bottom-border-10) 10px,
+    var(--bottom-border-10) 15px,
+    var(--bottom-border-5) 15px,
+    var(--bottom-border-5) 25px,
+    var(--width) 25px,
+    /* 右下 外侧 */ var(--width) var(--bottom-border-25),
+    var(--bottom-border-5) var(--bottom-border-25),
+    var(--bottom-border-5) var(--bottom-border-15),
+    var(--bottom-border-10) var(--bottom-border-15),
+    var(--bottom-border-10) var(--bottom-border-10),
+    var(--bottom-border-15) var(--bottom-border-10),
+    var(--bottom-border-15) var(--bottom-border-5),
+    var(--bottom-border-25) var(--bottom-border-5),
+    var(--bottom-border-25) var(--height),
+    /* 左下 外侧 */ 25px var(--height),
+    25px var(--bottom-border-5),
+    15px var(--bottom-border-5),
+    15px var(--bottom-border-10),
+    10px var(--bottom-border-10),
+    10px var(--bottom-border-15),
+    5px var(--bottom-border-15),
+    5px var(--bottom-border-25),
+    /* 左下 内侧 */ 10px var(--bottom-border-25),
+    10px var(--bottom-border-15),
+    15px var(--bottom-border-15),
+    15px var(--bottom-border-10),
+    25px var(--bottom-border-10),
+    25px var(--bottom-border-5),
+    /* 右下 内侧 */ var(--bottom-border-25) var(--bottom-border-5),
+    var(--bottom-border-25) var(--bottom-border-10),
+    var(--bottom-border-15) var(--bottom-border-10),
+    var(--bottom-border-15) var(--bottom-border-15),
+    var(--bottom-border-10) var(--bottom-border-15),
+    var(--bottom-border-10) var(--bottom-border-25),
+    var(--bottom-border-5) var(--bottom-border-25),
+    /* 右上 内侧 */ var(--bottom-border-5) 25px,
+    var(--bottom-border-10) 25px,
+    var(--bottom-border-10) 15px,
+    var(--bottom-border-15) 15px,
+    var(--bottom-border-15) 10px,
+    var(--bottom-border-25) 10px,
+    var(--bottom-border-25) 5px,
+    /* 左上 内侧 */ 25px 5px,
+    25px 10px,
+    15px 10px,
+    15px 15px,
+    10px 15px,
+    10px 25px,
+    5px 25px,
+    5px var(--bottom-border-25),
+    0px var(--bottom-border-25)
+  );
 }
 
 /* 包裹内侧 */
 .pixel-circle-image {
-    clip-path: polygon(
-        /* 左下 内侧 */ 10px var(--bottom-border-25),
-            10px var(--bottom-border-15),
-            15px var(--bottom-border-15),
-            15px var(--bottom-border-10),
-            25px var(--bottom-border-10),
-            25px var(--bottom-border-5),
-                /* 右下 内侧 */ var(--bottom-border-25) var(--bottom-border-5),
-            var(--bottom-border-25) var(--bottom-border-10),
-            var(--bottom-border-15) var(--bottom-border-10),
-            var(--bottom-border-15) var(--bottom-border-15),
-            var(--bottom-border-10) var(--bottom-border-15),
-            var(--bottom-border-10) var(--bottom-border-25),
-            var(--bottom-border-5) var(--bottom-border-25),
-                /* 右上 内侧 */ var(--bottom-border-5) 25px,
-            var(--bottom-border-10) 25px,
-            var(--bottom-border-10) 15px,
-            var(--bottom-border-15) 15px,
-            var(--bottom-border-15) 10px,
-            var(--bottom-border-25) 10px,
-            var(--bottom-border-25) 5px,
-                /* 左上 内侧 */ 25px 5px,
-            25px 10px,
-            15px 10px,
-            15px 15px,
-            10px 15px,
-            10px 25px,
-            5px 25px,
-            5px var(--bottom-border-25),
-            0px var(--bottom-border-25)
-    );
+  clip-path: polygon(
+    /* 左下 内侧 */ 10px var(--bottom-border-25),
+    10px var(--bottom-border-15),
+    15px var(--bottom-border-15),
+    15px var(--bottom-border-10),
+    25px var(--bottom-border-10),
+    25px var(--bottom-border-5),
+    /* 右下 内侧 */ var(--bottom-border-25) var(--bottom-border-5),
+    var(--bottom-border-25) var(--bottom-border-10),
+    var(--bottom-border-15) var(--bottom-border-10),
+    var(--bottom-border-15) var(--bottom-border-15),
+    var(--bottom-border-10) var(--bottom-border-15),
+    var(--bottom-border-10) var(--bottom-border-25),
+    var(--bottom-border-5) var(--bottom-border-25),
+    /* 右上 内侧 */ var(--bottom-border-5) 25px,
+    var(--bottom-border-10) 25px,
+    var(--bottom-border-10) 15px,
+    var(--bottom-border-15) 15px,
+    var(--bottom-border-15) 10px,
+    var(--bottom-border-25) 10px,
+    var(--bottom-border-25) 5px,
+    /* 左上 内侧 */ 25px 5px,
+    25px 10px,
+    15px 10px,
+    15px 15px,
+    10px 15px,
+    10px 25px,
+    5px 25px,
+    5px var(--bottom-border-25),
+    0px var(--bottom-border-25)
+  );
 }
