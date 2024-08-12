@@ -2,9 +2,9 @@
 import { ref } from "vue";
 
 const menu_list = ref([
-  { cn: "编年史", href: "/Chronicle", src: "/images/search.webp" },
-  { cn: "英灵殿", href: "/Valhalla", src: "/images/award.webp" },
-  { cn: "幻想乡", href: "/Arcadia", src: "/images/star.webp" },
+  { cn: "编年史", en: "/Chronicle", href: "/Chronicle", src: "/images/search.webp" },
+  { cn: "英灵殿", en: "/Valhalla", href: "/Valhalla", src: "/images/award.webp" },
+  { cn: "幻想乡", en: "/Arcadia", href: "https://blog.s1um4i.com", src: "/images/star.webp" },
 ]);
 </script>
 
@@ -32,7 +32,7 @@ const menu_list = ref([
             <div class="flex flex-col justify-center font-bold">
               <div class="text-4xl short:text-3xl">{{ menu.cn }}</div>
               <div class="text-slate-900 leading-4 short:text-sm">
-                {{ menu.href }}
+                {{ menu.en }}
               </div>
             </div>
           </div>
